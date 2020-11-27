@@ -1,6 +1,6 @@
 {
   "name": "geo-file-type",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Detect the Types of Geospatial Input, including ASCII Grid, Auxiliary XML, GeoTIFF, JPG, PNG, SHP (Shapefile), and World File",
   "main": "geo-file-type.js",
   "files": [

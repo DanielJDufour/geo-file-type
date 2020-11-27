@@ -34,7 +34,7 @@ function identify({ data, debug }) {
   } else if (isPNG(data)) {
     fileType = PNG;
   } else if (isJPG(data)) {
-    fileType = JPG;    
+    fileType = JPG;
   } else if (isAuxXML(data, debug)) {
     fileType = AUX_XML;
   } else if (isSHP({ data, debug }).result) {

@@ -4,6 +4,19 @@ Detect the Types of Geospatial Input, including ASCII Grid, Auxiliary XML, GeoTI
 # features
 - Memory Safe: avoids loading the whole file into memory
 
+# usage
+```javascript
+const geoFileType = require("geo-file-type");
+const fs = require("fs");
+
+const buffer = fs.readFileSync("./data/chattanooga.shp");
+const result = geoFileType({
+    data: buffer,
+    debug: false // set debug to true for extra logging
+});
+// result is { type: "SHP (Shapefile)" }
+```
+
 # file types
 | Name | Supported |
 | ---- | --------- |

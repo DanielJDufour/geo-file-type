@@ -29,7 +29,7 @@ const result = geoFileType({
 | NetCDF | Yes |
 | JPG | Yes |
 | PNG | Yes |
-| PRJ | No |
+| PRJ | Yes |
 | SHP (Shapefile) | Yes |
 | TopoJSON | No |
 | World File | Yes |

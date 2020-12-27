@@ -5,6 +5,7 @@ const isJPG = require("id-jpg");
 const isGeoTIFF = require("is-geotiff");
 const isWorldFile = require("is-wld");
 const isPNG = require("id-png");
+const isPRJ = require("is-prj");
 const isSHP = require("is-shp");
 const isTIF = require("id-tif");
 
@@ -15,6 +16,7 @@ const {
   GEOTIFF,
   JPG,
   PNG,
+  PRJ,
   SHP,
   TIF,
   WLD
@@ -39,6 +41,8 @@ function identify({ data, debug }) {
     fileType = AUX_XML;
   } else if (isSHP({ data, debug }).result) {
     fileType = SHP;
+  } else if (isPRJ({ data, debug }).result) {
+    fileType = PRJ;
   } else if (isTIF(data)) {
     if (debug) console.log("[geo-file-type] input is a TIFF");
     fileType = TIF;

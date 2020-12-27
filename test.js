@@ -68,3 +68,11 @@ test("detect SHP file", async t => {
   const result = geoFileType({ data: buffer, debug });
   t.is(result.type, "SHP (Shapefile)");
 });
+
+test("detect PRJ file", t => {
+  const debug = false;
+  const filepath = "./data/michigan_lld/michigan_lld.prj";
+  const buffer = fs.readFileSync(filepath);
+  t.is(geoFileType({ data: buffer, debug }).type, "PRJ");
+  t.is(geoFileType({ data: Uint8Array.from(buffer), debug }).type, "PRJ");
+});

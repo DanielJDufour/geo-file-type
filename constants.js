@@ -5,6 +5,7 @@ module.exports = {
   COG: "Cloud Optimized GeoTIFF",
   JPG: "JPEG",
   PNG: "PNG",
+  PRJ: "PRJ",
   SHP: "SHP (Shapefile)",
   TIF: "TIFF",
   WLD: "World File"
